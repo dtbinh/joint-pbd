@@ -1,0 +1,28 @@
+<package>
+    <description brief="SEDS">
+        Stable Estimator of Dynamical Systems (SEDS)
+        This package provides realtime, robust, and reactive controller 
+        to perform reaching movement. For more information about SEDS 
+        refer to the following paper:
+        
+        S.M. Khansari-Zadeh and A. Billar, "Learning Stable Non-Linear 
+        Dynamical Systems with Gaussian Mixture Models", IEEE Trans. on
+        Robotics, 2011.
+        
+        Please acknowledge the authors by citing the paper above in any 
+        academic and non-academic publication that have made use of this
+        code or part of it.
+        
+    </description>
+    <author>Mohammad Khansari</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    <url> http://lasa.epfl.ch/khansari </url>
+    <export> <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lSEDS "/> </export>
+    <depend package="MathLib"/>
+    <depend package="roscpp"/>
+    
+
+</package>
+
+
