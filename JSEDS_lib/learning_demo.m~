@@ -1,0 +1,27 @@
+
+
+A = [0 0 0 0 0 0 0];
+Alpha = pi*[1 -1 -1 1 1 -1 0];
+D = [.34 0 .4 0 .4 0 .126];
+Qmin = pi/180*[-85, -90, -100, -110, -140, -90, -120];
+Qmax = pi/180*[85, 90, 100, 110, 140, 9
+
+
+
+% 	mSKinematicChain->setDH(0,  0.0,  0.34, M_PI_2, 0.0, 1,  DEG2RAD( -85.), DEG2RAD( 85.), DEG2RAD(98.0)*0.90);
+% 	mSKinematicChain->setDH(1,  0.0,  0.00,-M_PI_2, 0.0, 1,  DEG2RAD( -90.), DEG2RAD( 90.), DEG2RAD(98.0)*0.90);
+% 	mSKinematicChain->setDH(2,  0.0,  0.40,-M_PI_2, 0.0, 1,  DEG2RAD(-100.), DEG2RAD(100.), DEG2RAD(100.0)*0.90);
+% 	mSKinematicChain->setDH(3,  0.0,  0.00, M_PI_2, 0.0, 1,  DEG2RAD(-110.), DEG2RAD(110.), DEG2RAD(130.0)*0.90);
+% 	mSKinematicChain->setDH(4,  0.0,  0.40, M_PI_2, 0.0, 1,  DEG2RAD(-140.), DEG2RAD(140.), DEG2RAD(140.0)*0.90);
+% 	mSKinematicChain->setDH(5,  0.0,  0.00,-M_PI_2, 0.0, 1,  DEG2RAD( -90.), DEG2RAD( 90.), DEG2RAD(180.0)*0.90); // reduced joint angle to save the fingers
+% 	mSKinematicChain->setDH(6, 0.0, 0.1260,    0.0, 0.0, 1,  DEG2RAD(-120.), DEG2RAD(120.), DEG2RAD(180.0)*0.90);
+% 
+
+
+num_gaussians = 6;
+seds_options;
+jseds_options;
+
+
+[xT, Data, index] = preprocess_demos_JSEDS(robotplant, demos, time, seds_options.tol_cutting, jseds_options);
+JSEDS_learning
